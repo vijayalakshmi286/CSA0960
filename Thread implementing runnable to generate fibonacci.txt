@@ -1,0 +1,36 @@
+import java.util.Scanner;
+class FiboCalc implements Runnable{
+    private int n;
+    public FiboCalc(int n)
+    {
+        this.n=n;
+    }
+    @Override
+    public void run()
+    {
+        int a=0;
+        int b=1;
+        System.out.print(a+" "+b+" ");
+        for(int i=2;i<=n;i++)
+        {
+            int c=a+b;
+            System.out.print(c+" ");
+            a=b;
+            b=c;
+        }
+    }
+}
+public class Main{
+    public static void main(String[] args)
+    {
+        Scanner input=new Scanner(System.in);
+        int n=input.nextInt();
+        FiboCalc f=new FiboCalc(n);
+        Thread thread=new Thread(f);
+        thread.start();
+    }
+}
+
+Output:
+5
+0 1 1 2 3 5 
