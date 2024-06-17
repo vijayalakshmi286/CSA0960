@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class ak{
+    public static void main(String[] args)
+    {
+        Scanner input=new Scanner(System.in);
+        int tax=input.nextInt();
+        if(tax>1000000)
+        {
+            System.out.print("Tax:"+(tax/30));
+        }
+        else if(tax>500000 && tax<=1000000)
+        {
+            System.out.print("Tax:"+(tax/20));
+        }
+        else if(tax>250000 && tax<=500000)
+        {
+            System.out.print("Tax:"+(tax/10));
+        }
+        else
+        {
+            System.out.print("No Tax!");
+        }
+    }
+}
+Output:
+350000
+Tax:35000
