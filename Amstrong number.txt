@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class Pp {
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input=new Scanner(System.in);
+        int n=input.nextInt();
+        int sum=0;
+        int temp=n;
+        while(temp>0)
+        {
+            int i=temp%10;
+            sum+=i*i*i;
+            temp/=10;
+        }
+        if(sum==n)
+        {
+            System.out.println("Amstrong Number");
+        }
+        else
+        {
+            System.out.println("Not an amstrong number");
+        }
+    }
+}
+Input:
+153
+Output:
+Amstrong Number
