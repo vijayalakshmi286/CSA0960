@@ -1,0 +1,67 @@
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.println("enter choice: 1.string, 2.Number");
+        int ch=input.nextInt();
+        switch(ch)
+        {
+            case 1:
+                String s=input.next();
+                int rig=s.length()-1;
+                int left=0;
+                boolean isPal=true;
+                while(left<rig)
+                {
+                    if(s.charAt(left)!=s.charAt(rig))
+                    {
+                        isPal=false;
+                        break;
+                    }
+                    left++;
+                    rig--;
+                }
+                if(isPal)
+                {
+                    System.out.print("Palindrome");
+                }
+                else
+                {
+                    System.out.print("Not palindrome");
+                }
+                break;
+            case 2:
+                int n=input.nextInt();
+                String str=Integer.toString(n);
+                int l=0;
+                int r=str.length()-1;
+                boolean isp=true;
+                while(l<r)
+                {
+                    if(str.charAt(l)!=str.charAt(r))
+                    {
+                        isp=false;
+                        break;
+                    }
+                    l++;
+                    r--;
+                }
+                if(isp)
+                {
+                    System.out.print("Palindrome");
+                }
+                else
+                {
+                    System.out.print("Not Palindrome");
+                }
+                break;
+            default:
+            System.out.print("invalid!");
+        }
+    }
+}
+Output:
+enter choice: 1.string, 2.Number
+1
+madam
+Palindrome
