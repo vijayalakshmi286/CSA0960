@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Pp {
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input=new Scanner(System.in);
+        int age=input.nextInt();
+        if(age>18)
+        {
+            System.out.println("eligible");
+        }
+        else
+        {
+            System.out.println("not eligible and remainig years:"+(18-age));
+        }
+    }
+}
+Input:
+15
+Output:
+
+not eligible and remainig years:3
