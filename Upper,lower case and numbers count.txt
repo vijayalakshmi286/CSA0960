@@ -1,0 +1,70 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package upperlower;
+
+/**
+ *
+ * @author harsh
+ */
+import java.util.Scanner;
+public class UpperLower {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input=new Scanner(System.in);
+        int uc=0,lc=0,nc=0;
+        while(true)
+        {
+            System.out.println("enter * to exit!");
+            char ch=input.next().charAt(0);
+            if(ch=='*')
+            {
+                break;
+            }
+            else if(Character.isUpperCase(ch))
+            {
+                uc++;
+            }
+            else if(Character.isLowerCase(ch))
+            {
+                lc++;
+            }
+            else if(Character.isDigit(ch))
+            {
+                nc++;
+            }
+        }
+        System.out.println("Upper case:"+uc);
+        System.out.println("Lower case:"+lc);
+        System.out.println("Numbers:"+nc);
+    } 
+}
+Output:
+enter * to exit!
+A
+enter * to exit!
+B
+enter * to exit!
+a
+enter * to exit!
+r
+enter * to exit!
+e
+enter * to exit!
+3
+enter * to exit!
+5
+enter * to exit!
+3
+enter * to exit!
+2
+enter * to exit!
+*
+Upper case:2
+Lower case:3
+Numbers:4
