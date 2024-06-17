@@ -1,0 +1,28 @@
+import java.util.Scanner;
+import java.util.Arrays;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        int s=input.nextInt();
+        int[] arr=new int[s];
+        for(int i=0;i<s;i++)
+        {
+            arr[i]=input.nextInt();
+        }
+        int m=input.nextInt();
+        int n=input.nextInt();
+        Arrays.sort(arr);
+        int mthmax=arr[s-m];
+        int nthmin=arr[n-1];
+        System.out.println(m+"th max:"+mthmax+"and"+n+"th min:"+nthmin);
+    }
+}
+Output:
+4
+5
+3
+2
+7
+3
+1
+3th max:3and1th min:2
