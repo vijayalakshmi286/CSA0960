@@ -1,0 +1,33 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class Practice {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input=new Scanner(System.in);
+        String s=input.nextLine();
+        int c=0;
+        for(int i=0;i<s.length();i++)
+        {
+            char ch=s.charAt(i);
+            
+            if(!Character.isLetterOrDigit(ch) && !Character.isWhitespace(ch))
+            {
+                System.out.println(ch);
+                c++;
+            }
+        }
+        System.out.println("Count:"+c);
+    }
+}
+Output:
+VH NHGJ 542 547V %^&^VNCD ,KSJ
+%
+^
+&
+^
+,
+Count:5
