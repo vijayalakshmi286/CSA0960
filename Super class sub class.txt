@@ -1,0 +1,30 @@
+class SuperClass
+{
+    int num1;
+    SuperClass(int num)
+    {
+        this.num1=num;
+    }
+}
+class SubClass extends SuperClass
+{
+    int num2;
+    SubClass(int num1,int num2)
+    {
+        super(num1);
+        this.num2=num2;
+    }
+    void display()
+    {
+        System.out.println(num1+","+num2);
+    }
+}
+public class Main{
+    public static void main(String[] args)
+    {
+        SubClass obj=new SubClass(100,200);
+        obj.display();
+    }
+}
+output:
+100,200
